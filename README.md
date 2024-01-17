@@ -18,3 +18,17 @@
 ## 点击设置-->项目设置-->勾选不校验合法域名
 ## 完成后项目即可完整运行
 
+### 项目总体效果如下:
+![首页](./previewImage/1.png)
+![首页](./previewImage/2.png)
+![搜索页](./previewImage/3.png)
+![精选视频](./previewImage/4.png)
+![MV播放页](./previewImage/5.png)
+![分类](./previewImage/6.png)
+![歌手简介](./previewImage/7.png)
+![发现页](./previewImage/8.png)
+![榜单详情](./previewImage/9.png)
+![歌曲播放页](./previewImage/10.png)
+![歌词效果](./previewImage/11.png)
+
+
