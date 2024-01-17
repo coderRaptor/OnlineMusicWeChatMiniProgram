@@ -4,7 +4,7 @@
     <view class="nav-item {{navIndex === index ? 'active' : ''}}" 
           wx:for="{{navList}}" 
           wx:key="name"
-          data-word="{{item.word}}"
+          data-word="{{item.name}}"
           data-index="{{index}}"
           bind:tap="navClick"
           >{{item.name}}</view>

@@ -35,7 +35,7 @@ Page({
     wx.request({
       url: 'http://localhost:3000/top/playlist?limit=20&cat='+this.data.word,
       success: (result) => {
-        console.log(result.data.playlists);
+        // console.log(result.data.playlists);
         this.setData({
           musicData:result.data.playlists
         })
