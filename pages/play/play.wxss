@@ -1,0 +1,147 @@
+/* pages/play/play.wxss */
+@import "../../style/iconfont.wxss";
+page{
+  height: 100%;
+  background-color: black;
+  padding-top: 200rpx;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+.bg{
+  height: 100%;
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  filter: blur(60px);
+  opacity: 0.4;
+  z-index: -1;
+}
+.music-name{
+  color: white;
+  text-align: center;
+  font-size: 50rpx;
+  padding: 0 20rpx;
+  line-height: 100rpx;
+}
+swiper{
+  flex-grow: 1;
+  /* background-color: aquamarine; */
+}
+swiper-item{
+  display: flex;
+  /* justify-content: center; */
+  /* align-items: center; */
+}
+.imgWrap{
+  width: 600rpx;
+  height: 600rpx;
+  margin: auto;
+  background: url(https://p5.music.126.net/obj/wo3DlcOGw6DClTvDisK1/4602256867/5855/63fb/325b/d7e4e3a244701ee85fecb5d4f6b5bd57.png) 100%/100% no-repeat;
+  /* background-color: orange; */
+  display: flex;
+  animation: imgplay 20s linear infinite;
+}
+.paused {
+  animation-play-state: paused;  
+  /* 该属性一旦被添加,CSS动画会立即暂停,并且保持于当前帧 */
+}
+
+.running {
+  animation-play-state: running; 
+  /* 该属性一旦被添加,CSS动画会立即从当前帧开始运作; */
+}
+
+@keyframes imgplay{
+  from{
+    transform: rotate(0deg);
+  }
+  to{
+    transform: rotate(360deg);
+  }
+}
+.imgWrap image{
+  display: block;
+  margin: auto;
+  width: 370rpx;
+  height: 370rpx;
+  border-radius: 50%;
+}
+.lrcscroll{
+  height: 100%;
+  /* background-color: red; */
+}
+.lrcscroll view{
+  color: #e9e9e9;
+  text-align: center;
+  font-size: 35rpx;
+  line-height: 80rpx;
+}
+.lrcscroll .color{
+  color: rgb(245, 183, 68);
+  font-size: 40rpx;
+}
+/* 进度条区域 */
+.timeBox{
+  height: 100rpx;
+  /* background-color: pink; */
+  padding: 60rpx 35rpx 0;
+}
+.timeBox slider{
+  margin: 0;
+  padding: 0;
+}
+.timeBox .timeshow{
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  font-size: 30rpx;
+  margin-top: 20rpx;
+}
+/* 底部按钮区域 */
+.footer{
+  height: 150rpx;
+  /* background-color: skyblue; */
+  padding-bottom: 60rpx;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.footer .iconfont{
+  font-size: 80rpx;
+  color: white;
+}
+/* 播放暂停按钮增大 */
+.footer .controlbtn{
+  font-size: 120rpx;
+}
+/* 两边按钮变小 */
+.footer .smallbtn{
+  font-size: 60rpx;
+}
+/* mv按钮 */
+.mvicon{
+  position: fixed;
+  right: 20rpx;
+  bottom: 300rpx;
+  width: 100rpx;
+  height: 100rpx;
+  /* background-color: orangered; */
+  display: flex;
+}
+.mvicon .iconfont{
+  font-size: 80rpx;
+  color: white;
+  margin: auto;
+}
+/* 播放列表 */
+.sheet view{
+  line-height: 70rpx;
+  text-align: center;
+  color: #333;
+  font-size: 30rpx;
+  /* border-bottom: 1rpx solid #f1f1f1; */
+}
+.sheet view.active{
+  color: orangered;
+}

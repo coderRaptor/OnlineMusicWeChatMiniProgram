@@ -1,0 +1,22 @@
+<!--pages/category/category.wxml-->
+<view class="main">
+  <view class="nav-list">
+    <view class="nav-item {{navIndex === index ? 'active' : ''}}" 
+          wx:for="{{navList}}" 
+          wx:key="name"
+          data-word="{{item.word}}"
+          data-index="{{index}}"
+          bind:tap="navClick"
+          >{{item.name}}</view>
+  </view>
+  <view class="content-list">
+      <view class="img-box"
+            wx:for="{{musicData}}"
+            wx:key="id"
+            data-id="{{item.id}}"
+            bind:tap="gotoDetail"
+            >
+        <image src="{{item.coverImgUrl}}"/>
+      </view>
+    </view>
+</view>

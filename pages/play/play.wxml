@@ -1,0 +1,86 @@
+<!--pages/play/play.wxml-->
+<back></back>
+<!-- 背景 -->
+<image src="{{music.al.picUrl}}" class="bg" mode="heightFix"/>
+<!-- 标题 -->
+<view class="music-name omit">{{music.name}}</view>
+<!-- 中间区域滑块 -->
+<swiper>
+  <swiper-item>
+    <view class="imgWrap {{rotate ? 'running' : 'paused'}}">
+      <image src="{{music.al.picUrl}}"/>
+    </view>
+  </swiper-item>
+  <swiper-item>
+    <!-- 滑动组件 -->
+    <scroll-view class="lrcscroll" 
+                  scroll-y="true" 
+                  scroll-with-animation="true"
+                  scroll-top="{{lrctop}}"
+                  >
+      <block wx:for="{{lrcdata}}" wx:key="index">
+        <view class="{{index === nowlrcIndex? 'color':''}}">{{item[1]}}</view>
+      </block>
+    </scroll-view>
+  </swiper-item>
+</swiper>
+<!-- 进度条以及时间区域 -->
+<view class="timeBox">
+  <slider block-size="12" 
+          activeColor="#ff7e7e"
+          min="0"
+          max="{{timeSum}}"
+          value="{{timeNow}}"
+          bindchange="sliderDrag"
+  />
+  <view class="timeshow">
+    <text>{{timeNow_str}}</text>
+    <text>{{timeSum_str}}</text>
+  </view>
+</view>
+<!-- 底部按钮区域 -->
+<view class="footer">
+  <!-- 列表循环 -->
+  <view class="iconfont icon-liebiaoxunhuan smallbtn"
+  wx:if="{{mode[modeIndex] === 'sequence'}}"
+  bind:tap="changeMode"
+  ></view>
+  <!-- 单曲循环 -->
+  <view class="iconfont icon-danquxunhuan smallbtn"
+  wx:if="{{mode[modeIndex] === 'single'}}"
+  bind:tap="changeMode"
+  ></view>
+  <!-- 随机播放 -->
+  <view class="iconfont icon-suijibofang smallbtn"
+  wx:if="{{mode[modeIndex] === 'random'}}"
+  bind:tap="changeMode"
+  ></view>
+  <!-- 上一首 -->
+  <view class="iconfont icon-24gf-previousCircle"
+  bind:tap="prevSong"
+  ></view>
+  <!-- 暂停 -->
+  <view class="iconfont icon-24gf-pauseCircle controlbtn" bind:tap="togglePlayState" wx:if="{{playState}}"></view>
+  <!-- 播放 -->
+  <view class="iconfont icon-24gf-playCircle controlbtn" bind:tap="togglePlayState" wx:else></view>
+  <!-- 下一首 -->
+  <view class="iconfont icon-24gf-nextCircle"
+  bind:tap="nextSong"
+  ></view>
+  <!-- 播放列表 -->
+  <view class="iconfont icon-bofangliebiao smallbtn" bind:tap="onOpen"></view>
+</view>
+<!-- mv按钮 -->
+<view class="mvicon" bind:tap="gotoMvPlay">
+  <view class="iconfont icon-bofangMV"></view>
+</view>
+<!-- 播放列表弹窗反馈 -->
+<van-action-sheet class="sheet" show="{{ show }}" bind:close="onClose" title="播放列表">
+  <block wx:for="{{musicList}}" wx:key="index" wx:for-index="in">
+    <view class="{{index === in ? 'active' : ''}}"
+    data-in="{{in}}"
+    bind:tap="listToggleSong"
+    >{{item.name}}</view>
+  </block>
+</van-action-sheet>
+

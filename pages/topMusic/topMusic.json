@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "van-icon": "@vant/weapp/icon/index",
+    "back":"/components/back/back",
+    "playbox":"/components/playbox/playbox"
+  },
+  "navigationStyle": "custom"
+}

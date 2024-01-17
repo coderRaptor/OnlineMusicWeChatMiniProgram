@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "title":"/components/title/title",
+    "playbox":"/components/playbox/playbox"
+  },
+  "navigationBarTitleText": "精选视频"
+}

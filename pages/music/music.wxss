@@ -1,0 +1,85 @@
+/* pages/music/music.wxss */
+::-webkit-scrollbar{
+  display:none;
+}
+
+page{
+  padding: 10rpx;
+  box-sizing: border-box;
+}
+swiper{
+  width: 100%;
+  border-radius: 15rpx;
+  overflow: hidden;
+}
+swiper image{
+  width: 100%;
+  height: 100%;
+}
+.gridBox{
+  padding: 20rpx 0;
+}
+
+/* 歌手列表 */
+.hotBox{
+  padding: 15rpx 0;
+  border-bottom: 1rpx solid #f1f1f1;
+  display: flex;
+  overflow: auto;
+}
+.hotBox .hotItem{
+  width: 200rpx;
+  /* height: 250rpx; */
+  text-align: center;
+  margin-right: 10rpx;
+}
+.hotBox .hotItem image{
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 15rpx;
+}
+.hotBox .hotItem .name{
+  font-size: 32rpx;
+  color: #555;
+
+}
+
+/* 最新音乐列表 */
+/* .newMusicList{
+
+} */
+.newMusicList .musicItem{
+  padding: 20rpx 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1rpx solid #f1f1f1;
+}
+.musicItem>image{
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 15rpx;
+}
+.musicItem .content{
+  flex-grow: 1;
+  padding-left: 20rpx;
+}
+.musicItem .content .musicName{
+  font-size: 32rpx;
+  width: 450rpx;
+}
+.musicItem .content .name{
+  display: flex;
+  align-items: center;
+  width: 300rpx;
+}
+.musicItem .content .name .tag{
+  width: 52rpx;
+  height: 48rpx;
+  margin-right: 16rpx;
+}
+.musicItem .content .name text{
+  width: 450rpx;
+  color: #666;
+  font-size: 28rpx;
+}

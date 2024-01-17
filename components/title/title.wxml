@@ -1,0 +1,2 @@
+<!--components/title/title.wxml-->
+<view class="title">{{name}}</view>

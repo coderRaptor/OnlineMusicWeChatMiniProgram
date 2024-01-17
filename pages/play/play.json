@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "back":"/components/back/back",
+    "van-action-sheet": "@vant/weapp/action-sheet/index"
+  },
+  "navigationStyle": "custom",
+  "navigationBarTextStyle":"white"
+}

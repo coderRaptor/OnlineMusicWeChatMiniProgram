@@ -1,0 +1,4 @@
+<!--components/back/back.wxml-->
+<navigator class="back" open-type="navigateBack" delta="1">
+  <van-icon name="arrow-left" size="60rpx" class="backicon"/>
+</navigator>

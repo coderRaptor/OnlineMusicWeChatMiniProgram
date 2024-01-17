@@ -1,0 +1,28 @@
+<!--pages/mvplay/mvplay.wxml-->
+<video src="{{mvurl}}"
+class="mvvideo"
+autoplay
+loop
+/>
+<view class="content">
+  <view class="con_title">{{mvdetail.name}}</view>
+  <view class="artistName">{{mvdetail.desc}}</view>
+  <view class="artistName">{{mvdetail.artistName}}</view>
+  <view class="con_con">{{mvdetail.countStr}}次播放-发表时间-{{mvdetail.publishTime}}</view>
+</view>
+<!-- 推荐列表 -->
+<view class="recommendlist">
+  <title name="为你推荐"></title>
+  <view class="item" 
+        wx:for="{{mvs}}" 
+        wx:key="index"
+        data-mvid="{{item.id}}"
+        bind:tap="changeMV"
+        >
+    <image src="{{item.cover}}" mode="widthFix"/>
+    <view class="item_con">
+      <view class="item_title">{{item.name}}</view>
+      <view class="item_name">{{item.artistName}}</view>
+    </view>
+  </view>
+</view>

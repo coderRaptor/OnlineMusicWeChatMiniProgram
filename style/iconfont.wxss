@@ -1,0 +1,119 @@
+/* 在线链接服务仅供平台体验和调试使用，平台不承诺服务的稳定性，企业客户需下载字体包自行发布使用并做好备份。 */
+@font-face {
+  font-family: 'iconfont';  /* Project id 3792617 */
+  src: url('//at.alicdn.com/t/c/font_3792617_xkx4w7iaim.woff2?t=1670402322860') format('woff2'),
+       url('//at.alicdn.com/t/c/font_3792617_xkx4w7iaim.woff?t=1670402322860') format('woff'),
+       url('//at.alicdn.com/t/c/font_3792617_xkx4w7iaim.ttf?t=1670402322860') format('truetype');
+}
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-fenxiang:before {
+  content: "\e600";
+}
+
+.icon-danqu:before {
+  content: "\e615";
+}
+
+.icon-24gf-next:before {
+  content: "\ea7f";
+}
+
+.icon-24gf-nextCircle:before {
+  content: "\ea80";
+}
+
+.icon-24gf-pause2:before {
+  content: "\ea81";
+}
+
+.icon-24gf-pauseCircle:before {
+  content: "\ea82";
+}
+
+.icon-24gf-play:before {
+  content: "\ea83";
+}
+
+.icon-24gf-playCircle:before {
+  content: "\ea84";
+}
+
+.icon-24gf-previousCircle:before {
+  content: "\ea87";
+}
+
+.icon-24gf-previous:before {
+  content: "\ea88";
+}
+
+.icon-a-zhengzaizhibozhengzaibofang:before {
+  content: "\e6e1";
+}
+
+.icon-bofangliebiao:before {
+  content: "\e6a7";
+}
+
+.icon-bofangzhong:before {
+  content: "\e68f";
+}
+
+.icon-zanting:before {
+  content: "\e691";
+}
+
+.icon-shangyiqu:before {
+  content: "\e692";
+}
+
+.icon-xiayiqu:before {
+  content: "\e693";
+}
+
+.icon-bofangliebiao1:before {
+  content: "\e696";
+}
+
+.icon-suijibofang:before {
+  content: "\e6a0";
+}
+
+.icon-danquxunhuan:before {
+  content: "\e6a2";
+}
+
+.icon-liebiaoxunhuan:before {
+  content: "\e6a3";
+}
+
+.icon-bofangMV:before {
+  content: "\e6a4";
+}
+
+.icon-Notesmusic:before {
+  content: "\e6af";
+}
+
+.icon-Playerstop:before {
+  content: "\e6ae";
+}
+
+.icon-Playerplay:before {
+  content: "\e6b0";
+}
+
+.icon-Playernext:before {
+  content: "\e6b1";
+}
+
+.icon-Playerpause:before {
+  content: "\e6b2";
+}
+

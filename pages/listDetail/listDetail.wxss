@@ -1,0 +1,130 @@
+/* pages/listDetail/listDetail.wxss */
+
+.bg{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-color: black;
+  z-index: -1;
+  overflow: hidden;
+}
+.bg image{
+  width: 100%;
+  height: 100%;
+  /* 模糊效果 */
+  filter: blur(40rpx);
+  opacity: .8;
+}
+.header {
+  padding: 20rpx;
+}
+.header .title{
+  text-align: center;
+  color: white;
+  height: 100rpx;
+  padding-top: 100rpx;
+  /* background-color: pink; */
+  font-size: 40rpx;
+}
+.header .content{
+  display: flex;
+  justify-content: space-between;
+}
+.header .content .imgBox{
+  width: 280rpx;
+  height: 280rpx;
+}
+.header .content .imgBox image{
+  width: 100%;
+  height: 100%;
+  border-radius: 15rpx;
+}
+.header .content .txtBox{
+  width: 410rpx;
+  /* flex: 1; */
+  /* background-color: pink; */
+}
+.header .content .txtBox .name{
+  font-size: 40rpx;
+  color: white;
+}
+.header .content .txtBox .desc{
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -webkit-line-clamp: 3;
+  font-size: 30rpx;
+  color: #e6e6e6;
+  margin-top: 20rpx;
+}
+/* 分享按钮 */
+.shareBtnBox{
+  width: 360rpx;
+  height: 70rpx;
+  background-color: rgba(255, 255, 255, .3);
+  font-size: 30rpx;
+  color: white;
+  margin: 20rpx auto;
+  border-radius: 50rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.listBox{
+  background-color: white;
+  border-radius: 30rpx;
+  padding: 20rpx;
+}
+.shareBtnBox text{
+  margin-left: 15rpx;
+}
+.playAllBox{
+  color: #333;
+  display: flex;
+  align-items: center;
+  padding: 20rpx 0;
+}
+.playAllBox text.txt{
+  font-size: 32rpx;
+}
+.playAllBox text{
+  font-size: 28rpx;
+  color: #555;
+  margin-left: 15rpx;
+}
+.musicList .item{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 120rpx;
+  /* background-color: orange; */
+  border-bottom: 1rpx solid #f1f1f1;
+}
+.musicList .item .txtWrap{
+  display: flex;
+  align-items: center;
+}
+.musicList .item .content{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.musicList .item .content .musicName{
+  font-size: 35rpx;
+  color: #555;
+  /* background-color: orange; */
+  width: 400rpx;
+}
+.musicList .item .content .musicDesc{
+  font-size: 28rpx;
+  color: #666;
+  width: 350rpx;
+}
+.musicList .item .number{
+  font-size: 40rpx;
+  color: #666;
+  margin-right: 30rpx;
+}
+
+

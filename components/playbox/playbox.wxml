@@ -1,0 +1,12 @@
+<!--components/playbox/playbox.wxml-->
+<view class="box" bind:tap="gotoPlay">
+  <image src="{{music.al.picUrl}}" class="bg"/>
+  <view class="box-wrap">
+    <view class="imgbox">
+      <image src="{{music===null?'https://s4.music.126.net/style/web2/img/default/default_album.jpg':music.al.picUrl}}"/>
+    </view>
+    <view class="txt-box omit">
+      {{music === null ? '欢迎使用 - OnlineMusic' : '正在播放: ' + music.name}}
+    </view>
+  </view>
+</view>

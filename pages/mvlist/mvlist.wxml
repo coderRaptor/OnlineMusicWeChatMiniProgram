@@ -1,0 +1,17 @@
+<!--pages/mvlist/mvlist.wxml-->
+<title name="精选视频"></title>
+<view class="list">
+  <view class="item" 
+        wx:for="{{mvlist}}" 
+        wx:key="index"
+        bind:tap="gotoMvPlay"
+        data-mvid="{{item.id}}"
+        >
+    <view class="imgbox">
+      <image src="{{item.cover}}" mode="widthFix"/>
+      <view class="iconfont icon-bofangMV">{{item.countStr}}</view>
+    </view>
+    <view class="desc">{{item.name}}</view>
+  </view>
+</view>
+<playbox></playbox>

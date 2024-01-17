@@ -1,0 +1,43 @@
+/* pages/find/find.wxss */
+page{
+  padding: 10rpx;
+  box-sizing: border-box;
+}
+/* .topBox{
+
+} */
+.topBox .item{
+  display: flex;
+  margin-bottom: 20rpx;
+  border-bottom: 1rpx solid #f1f1f1;
+}
+.topBox .item .imgBox{
+  width: 250rpx;
+  height: 250rpx;
+  position: relative;
+}
+.topBox .item .imgBox image{
+  width: 250rpx;
+  height: 250rpx;
+}
+.topBox .item .imgBox text{
+  position: absolute;
+  left: 5%;
+  bottom: 2%;
+  color: white;
+  font-size: 28rpx;
+}
+.topBox .item .songList{
+  flex-grow: 1;
+  margin-left: 15rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.topBox .item .songList .songItem{
+  width: 450rpx;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  font-size: 32rpx;
+}

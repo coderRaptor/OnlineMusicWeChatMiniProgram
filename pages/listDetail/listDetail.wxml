@@ -1,0 +1,63 @@
+<!--pages/listDetail/listDetail.wxml-->
+<!-- 榜单详情 -->
+<back></back>
+<view class="bg">
+  <image src="{{detailData.coverImgUrl}}"/>
+</view>
+<!-- 头部 -->
+<view class="header">
+  <view class="title">榜单</view>
+  <view class="content">
+    <view class="imgBox">
+      <image src="{{detailData.coverImgUrl}}"/>
+    </view>
+    <view class="txtBox">
+      <view class="name">{{detailData.name}}</view>
+      <view class="desc">
+        {{detailData.description}}
+      </view>
+    </view>
+  </view>
+  <button class="shareBtnBox" open-type="share">
+    <van-icon name="share-o" size="40rpx"/>
+    <text>分享给微信好友</text>
+  </button>
+</view>
+<!-- 榜单歌曲 -->
+<view class="listBox">
+  <view class="playAllBox"
+        data-index="{{0}}"
+        data-list="{{songs}}"
+        bind:tap="GoPlay"
+  >
+    <van-icon name="play-circle-o" size="50rpx" color="#333"/>
+    <text class="txt">播放全部</text>
+    <text>(共30首)</text>
+  </view>
+  <view class="musicList">
+    <view class="item" 
+          wx:for="{{songs}}" 
+          wx:key="id"
+          bind:tap="GoPlay" 
+          data-list="{{songs}}" 
+          data-index="{{index}}"
+          >
+      <view class="txtWrap">
+        <view class="number">{{index+1}}</view>
+        <view class="content">
+          <view class="musicName omit">{{item.name}}</view>
+          <view class="musicDesc omit">
+            <block wx:for="{{item.ar}}" wx:key="index">
+              {{item.name}}
+            </block>
+          </view>
+        </view>
+      </view>
+      <view class="play">
+        <van-icon name="play-circle-o" size="70rpx" color="#9b9b9b" />
+      </view>
+    </view>
+  </view>
+</view>
+<playbox></playbox>
+

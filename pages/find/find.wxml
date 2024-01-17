@@ -1,0 +1,23 @@
+<!--pages/find/find.wxml-->
+<navigator url="/pages/search/search">
+  <van-search
+    shape="round"
+    background="#fff"
+    placeholder="请输入搜索关键词"
+  />
+</navigator>
+
+<view class="topBox">
+  <view class="item" wx:for="{{topList}}" wx:key="id" bind:tap="gotoDetail" data-id="{{item.id}}">
+    <view class="imgBox">
+      <image src="{{item.coverImgUrl}}" mode="aspectFill"/>
+      <text>{{item.updateFrequency}}</text>
+    </view>
+    <view class="songList">
+      <view class="songItem" wx:for="{{item.songsList}}" wx:key="id">
+        {{index + 1}} {{item.name}} 
+      </view>
+    </view>
+  </view>
+</view>
+<playbox></playbox>

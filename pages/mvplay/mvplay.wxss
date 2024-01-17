@@ -1,0 +1,57 @@
+/* pages/mvplay/mvplay.wxss */
+.mvvideo{
+  width: 100%;
+}
+.content{
+  padding: 20rpx;
+  box-sizing: border-box;
+}
+.content view{
+  margin: 8rpx 0;
+}
+.content .con_title{
+  font-size: 38rpx;
+}
+.content .artistName{
+  font-size: 32rpx;
+  color: #444;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -webkit-line-clamp: 2;
+}
+.content .con_con{
+  font-size: 30rpx;
+  color:#666;
+}
+
+/* 推荐 */
+.recommendlist{
+  padding: 0rpx 20rpx 20rpx 20rpx;
+}
+.recommendlist .item{
+  display: flex;
+  padding: 10rpx;
+  align-items: center;
+  justify-content: space-between;
+}
+.item > image{
+  width: 250rpx;
+}
+.item > .item_con{
+  width: 420rpx;
+}
+.item > .item_con > .item_title{
+  font-size: 32rpx;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -webkit-line-clamp: 2;
+  color: #444;
+}
+.item > .item_con > .item_name{
+  font-size: 28rpx;
+  color: #666;
+}

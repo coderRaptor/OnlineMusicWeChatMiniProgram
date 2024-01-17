@@ -1,0 +1,68 @@
+<!--pages/music/music.wxml-->
+<!-- 轮播图 -->
+<swiper indicator-dots
+        indicator-color="#fff"
+        indicator-active-color="red"
+        autoplay
+        interval="2000"
+        duration="500"
+        circular
+>
+  <block wx:for="{{swiperList}}" wx:key="imageUrl">
+    <swiper-item>
+      <image src="{{item.imageUrl}}" />
+    </swiper-item>
+  </block>
+</swiper>
+<!-- 核心功能区 -->
+<view class="gridBox">
+  <van-grid 
+  column-num="5" 
+  square border="{{false}}" 
+  icon-size="100rpx">
+  <navigator url="{{item.url}}" wx:for="{{ gridList }}" wx:key="name">
+    <van-grid-item icon="{{item.path}}" text="{{item.name}}" />
+  </navigator>
+  </van-grid>
+</view>
+<!-- 热门歌手 -->
+<title name="热门歌手"></title>
+<view class="hotBox">
+  <view class="hotItem" wx:for="{{topSingerList}}" wx:key="id"  bind:tap="gotoSingerDetail" data-singerID="{{item.id}}">
+    <image src="{{item.picUrl}}" mode="aspectFill" />
+    <view class="name">{{item.name}}</view>
+  </view>
+</view>
+<!-- 热歌推荐 -->
+<title name="热歌推荐"></title>
+<view class="hotBox">
+  <view class="hotItem" wx:for="{{topSongList}}" wx:key="id" bind:tap="GoPlay" data-list="{{topSongList}}" data-index="{{index}}">
+    <image src="{{item.al.picUrl}}" mode="aspectFill"/>
+    <view class="name omit">{{item.name}}</view>
+  </view>
+</view>
+
+<!-- 最新音乐 -->
+<title name="最新音乐"></title>
+<view class="newMusicList">
+  <view class="musicItem" 
+        wx:for="{{newSongList}}" 
+        wx:key="id"
+        bind:tap="GoPlay" 
+        data-list="{{newSongList}}" 
+        data-index="{{index}}"
+        >
+    <image src="{{item.picUrl}}" mode=""/>
+    <view class="content">
+      <view class="musicName omit">{{item.name}}</view>
+      <view class="name">
+        <van-tag plain type="danger" class="tag">SQ</van-tag>
+        <text class="omit">{{item.song.artists[0].name}}</text>
+      </view>
+    </view>
+    <view class="play">
+      <van-icon name="play-circle-o" size="80rpx" color="#888" />
+    </view>
+  </view>
+</view>
+<playbox></playbox>

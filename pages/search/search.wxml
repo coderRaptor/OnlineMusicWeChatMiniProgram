@@ -1,0 +1,45 @@
+<!--pages/search/search.wxml-->
+<!-- 搜索 -->
+<van-search
+  value="{{ value }}"
+  placeholder="请输入搜索关键词"
+  shape="round"
+  bind:change="onChange"
+  bind:search="onSearch"
+/>
+<view class="listBox" wx:if="{{resultList.length==0}}">
+  <title name="热搜榜"></title>
+  <view class="list">
+    <view class="item" wx:for="{{hotlist}}" wx:key="index" bind:tap="goSearch" data-word="{{item.searchWord}}">
+      <view class="nub">{{index + 1}}</view>
+      <view class="con">
+        <view class="name">
+          {{item.searchWord}}
+          <van-tag type="warning" wx:if="{{item.iconType === 1}}">热</van-tag>
+          <van-tag type="primary" wx:if="{{item.iconType === 5}}">顶</van-tag>
+        </view>
+        <view class="desc omit">{{item.content}}</view>
+      </view>
+      <view class="count">{{item.score}}</view>
+    </view>
+  </view>
+</view>
+
+<view class="resultListBox" wx:else>
+  <van-cell title="{{item.name}}" 
+            wx:for="{{resultList}}" 
+            wx:key="index" 
+            size="large" 
+            label="{{item.album.name}}"
+            data-list="{{resultList}}"
+            data-index="{{index}}"
+            bind:tap="GoPlay"
+            >
+    <van-icon slot="right-icon" 
+              name="play-circle-o" 
+              class="custom-icon" 
+              size="60rpx" 
+              color="#666" />
+  </van-cell>
+</view>
+<playbox></playbox>

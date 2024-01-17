@@ -1,0 +1,20 @@
+/* components/title/title.wxss */
+.title{
+  padding-left: 30rpx;
+  font-size: 36rpx;
+  font-weight: bold;
+  position: relative;
+  margin: 15rpx 0;
+  font-weight: bold;
+}
+.title::after{
+  content:"";
+  display: block;
+  width: 6rpx;
+  height: 30rpx;
+  background-color: orangered;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}

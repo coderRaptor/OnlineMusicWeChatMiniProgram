@@ -1,0 +1,45 @@
+<!--pages/singerDetail/singerDetail.wxml-->
+<back></back>
+<view class="imgShow">
+  <image src="{{detail.artist.cover}}" mode="aspectFill"/>
+  <view class="txtBox">
+    <view class="name">{{detail.artist.name}}</view>
+    <view class="description">{{detail.identify.imageDesc}}</view>
+  </view>
+</view>
+<view class="descBox">
+  <title name="歌手简介"></title>
+  <view class="content {{txtShow ? 'show' : 'hidden'}}">
+    {{detail.artist.briefDesc}}
+  </view>
+  <view class="showBtn" bind:tap="clickBtn">
+    <text>{{txtShow ? "收起" : "查看歌手完整介绍"}}</text>
+    <van-icon name="arrow-down" wx:if="{{!txtShow}}"/>
+    <van-icon name="arrow-up" wx:else/>
+  </view>
+</view>
+<!-- 热门单曲 -->
+<view class="musicList">
+  <title name="热门单曲"></title>
+  <view class="item" 
+        wx:for="{{topMusic}}" 
+        wx:key="index" 
+        data-list="{{topMusic}}"
+        data-index="{{index}}"
+        bind:tap="GoPlay"
+        >
+    <view class="con">
+      <view class="musicName omit">{{item.name}}</view>
+      <view class="musicDesc omit">
+        {{detail.artist.name}}
+        <block wx:for="{{item.alia}}" wx:key="*this">
+          — {{item}}
+        </block>
+      </view>
+    </view>
+    <view class="play">
+      <van-icon name="play-circle-o" size="70rpx" color="orange"/>
+    </view>
+  </view>
+</view>
+<playbox></playbox>

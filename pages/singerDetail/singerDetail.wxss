@@ -1,0 +1,75 @@
+/* pages/singerDetail/singerDetail.wxss */
+
+.imgShow {
+  position: relative;
+}
+.imgShow > image{
+  width: 100%;
+  height: 600rpx;
+}
+.imgShow .txtBox {
+  position: absolute;
+  left: 30rpx;
+  top: 400rpx;
+  color: white;
+}
+.imgShow .txtBox .name{
+  font-size: 65rpx;
+  font-weight: bold;
+}
+.imgShow .txtBox .description{
+  font-size: 28rpx;
+}
+/* 歌手简介 */
+.descBox{
+  padding: 0 20rpx;
+}
+.descBox .content{
+  font-size: 26rpx;
+  color: #666;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient:vertical;
+}
+.showBtn{
+  color: #666;
+  font-size:30rpx;
+  text-align: center;
+  padding: 15rpx 0;
+  background-color: pink;
+}
+.show{
+  -webkit-line-clamp: 0;
+}
+.hidden{
+  -webkit-line-clamp: 3;
+}
+/* 热门单曲 */
+.musicList{
+  padding: 20rpx;
+}
+.musicList .item{
+  display: flex;
+  height: 140rpx;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1rpx solid #f1f1f1;
+}
+.musicList .item .con{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.musicList .item .con .musicName{
+  font-size: 35rpx;
+  font-weight: bold;
+  width: 600rpx;
+  /* background-color: pink; */
+}
+.musicList .item .con .musicDesc{
+  font-size: 28rpx;
+  color: #666;
+  width: 600rpx;
+  /* background-color: pink; */
+}

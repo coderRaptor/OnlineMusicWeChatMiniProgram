@@ -1,0 +1,42 @@
+/* pages/search/search.wxss */
+.listBox{
+  padding: 20rpx;
+}
+.list .item{
+  padding: 15rpx 0;
+  /* background-color: pink; */
+  height: 90rpx;
+  border-bottom: 1rpx solid #f1f1f1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.item .nub{
+  font-size: 40rpx;
+  font-weight: bold;
+  color: #555;
+  width: 80rpx;
+  /* background-color: pink; */
+  text-align: center;
+}
+.item .con{
+  flex: 1;
+}
+.item .con .name,
+.item .con .desc{
+  width: 430rpx;
+}
+.item .con .name{
+  font-size: 40rpx;
+  color: #555;
+}
+.item .con .desc{
+  font-size: 30rpx;
+  color: #888;
+}
+.item .count{
+  width: 100rpx;
+  color: #888;
+}
+
+

@@ -1,0 +1,25 @@
+<!--pages/user/user.wxml-->
+<view class="container">
+  <view class="userinfo">
+    <block wx:if="{{!hasUserInfo}}">
+      <view wx:if="{{canIUseGetUserProfile}}" 
+            bind:tap="getUserProfile" 
+            class="user-btn">
+        <image src="/images/1_user4.png"/>
+        <!-- <text>获取头像昵称</text> -->
+      </view>
+      <!-- <button wx:else open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button> -->
+    </block>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+</view>
+<view class="footer">
+  <image src="https://ts1.cn.mm.bing.net/th/id/R-C.0b125f57594e38bf7ab2484793b590f9?rik=Y0di456yDSztQw&riu=http%3a%2f%2fimg3.redocn.com%2ftupian%2f20150512%2fshouhuiyinlebeijingsucai_3914830.jpg&ehk=LEbCza2pd4GVeh6YibFowHJ6HMts67wkLLm6O14GaLA%3d&risl=&pid=ImgRaw&r=0" mode="heightFix" class="logo"/>
+  <image src="/images/recommand_bg_2x.png" class="bg"/>
+  <navigator url="/pages/search/search">
+    <view class="btn">点击搜歌发现更多精彩</view>
+  </navigator>
+</view>

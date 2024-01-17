@@ -1,0 +1,48 @@
+{
+  "pages": [
+    "pages/music/music",
+    "pages/find/find",
+    "pages/singerDetail/singerDetail",
+    "pages/listDetail/listDetail",
+    "pages/search/search",
+    "pages/play/play",
+    "pages/mvlist/mvlist",
+    "pages/mvplay/mvplay",
+    "pages/topMusic/topMusic",
+    "pages/category/category",
+    "pages/user/user"
+  ],
+  "tabBar": {
+    "color": "#cdcdcd",
+    "selectedColor": "#ff7e7e",
+    "list": [{
+      "pagePath": "pages/music/music",
+      "text": "音乐",
+      "iconPath": "/images/music1.png",
+      "selectedIconPath": "/images/music.png"
+    },
+    {
+      "pagePath": "pages/find/find",
+      "text": "发现",
+      "iconPath": "/images/find1.png",
+      "selectedIconPath": "/images/find.png"
+    }]
+  },
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "OnlineMusic",
+    "backgroundTextStyle":"light"
+  },
+  "rendererOptions": {
+    "skyline": {
+      "defaultDisplayBlock": true,
+      "disableABTest": true,
+      "sdkVersionBegin": "3.0.0",
+      "sdkVersionEnd": "15.255.255"
+    }
+  },
+  "componentFramework": "glass-easel",
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents"
+}
